@@ -9,4 +9,6 @@ investigate bad partial solutions.
 
 Take this and add your own pruning methods, special pieces, special board, or whatnot.
 
+I used Eclipse to make this. Download this code and import it to your Eclipse to run it.
+
 LK00100100@gmail.com
