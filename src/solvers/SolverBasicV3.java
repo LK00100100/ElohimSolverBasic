@@ -11,23 +11,34 @@ import java.util.List;
  * version 3.
  * - currentBox space left counter (something like this?)??
  * - remove combinations for end parts. 123 = 132 = 213 = 231 = 312 = 321???
- *
+ * <p>
  * solves a game called "Sigil of Elohim" and its tetris box puzzles.
  * the game was made by DevolverDigital. Available for PC/Mobile for free.
- *
+ * <p>
  * This code is easily modifiable so that you can:
  * 1) Have a box with "holes"
  * 2) Have diverse Pieces.
- *
+ * <p>
  * This code was created for part A of the game.
- *
+ * <p>
  * Please note, "bruteforcing backtracking" may take a while to produce the solution.
  * Turning off System.printStuff makes things faster.
- *
+ * <p>
  * Pruning ideas?
  * - currentBox space left counter (something like this?)??
  * - remove combinations for end parts. 123 = 132 = 213 = 231 = 312 = 321???
- *
+ * <p>
+ * 1) In a sorted list of pieces, if the current piece to place down is the same as the previous piece
+ * (was calculated), skip to the next piece to avoid recalculation.
+ * <p>
+ * 2) If the current piece does not fit even with all its rotations, backtrack.
+ * <p>
+ * 3) After placing a piece, check around the immediate area around the piece to see if there are any "bubbles" of
+ * spaces which are of a size that are too small (a bubble of two blocks cannot fit any of the 4-block tetris
+ * pieces). If there is a "bubble" that's smaller than a certain size, backtrack. For one space, the bubbleCheck()
+ * will only look only as far as a certain number so it does look through the whole board. Also there is a 2d
+ * grid to store what has been bubbledChecked and the size it encountered. This is checked before looking around
+ * the board for the bubble size.
  */
 public class SolverBasicV3 implements Solver {
 
@@ -84,7 +95,7 @@ public class SolverBasicV3 implements Solver {
                                     //update variables, recursively go deeper into the rabbit hole...
                                     boolean answerFound = findSolutionHelper(currentBox, piecesRemaining);
 
-                                    if(answerFound)
+                                    if (answerFound)
                                         return true;
                                 }
 
@@ -301,7 +312,7 @@ public class SolverBasicV3 implements Solver {
      * @param currentBox - the box that will be modified with the fit (if it fits) piece.
      * @param thePiece   - the piece to attempt to fit
      * @param row        of the box.
-     * @param col     of the box.
+     * @param col        of the box.
      * @return boolean - success or failure of piece fitting
      */
     private static boolean fitPiece(int[][] currentBox, Piece thePiece, int row, int col) {
@@ -349,7 +360,7 @@ public class SolverBasicV3 implements Solver {
      * it is implied that the piece exists when you call this method
      *
      * @param currentBox -
-     * @param thePiece -
+     * @param thePiece   -
      * @param row        - currentBox's row
      * @param col        - currentBox's column
      */

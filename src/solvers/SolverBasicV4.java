@@ -10,31 +10,54 @@ import java.util.List;
  * Solves Elohim Puzzle with basic brute-force algorithm.
  * with more solution pruning.
  * version 4.
- *
+ * <p>
  * solves a game called "Sigil of Elohim" and its tetris box puzzles.
  * the game was made by DevolverDigital. Available for PC/Mobile for free.
- *
+ * <p>
  * This code is easily modifiable so that you can:
  * 1) Have a box with "holes" (not tested).
  * 2) Have diverse Pieces (not tested).
- *
+ * <p>
  * This code was created for part A of the game.
- *
+ * <p>
  * Please note, "bruteforcing backtracking" may take a while to produce the solution.
  * Turning off System.printStuff makes things faster.
- *
+ * <p>
  * Note: Not tested for 4-block tetris pieces.
- *
+ * <p>
  * Note: It takes at most 20 minutes for 2-8 & 3-8 (for my computer at least)
- *
+ * <p>
  * Note: The order of the sorted pieces heavily affects the program.
  * Straight pieces followed by square pieces have a lower chance of leaving bubbles.
  * If they go first, the program is faster.
  * Maybe? Sorting by piece quantity is better?
- *
+ * <p>
  * Pruning ideas?
  * - bubbles that are not divisible by a certain number "like 4"
- *
+ * <p>
+ * Same as ElohimSolver3 but takes bubbles of minSize and pushes pieces into them
+ * <p>
+ * This program will take a pool of pieces and jam them in every which way possible into the board. Unfortunately, this is very,
+ * very slow. Some partial solutions are bad and shouldn't be investigated further. This program will "prune" bad partial
+ * solutions and backtrack.
+ * <p>
+ * The pruning methods are: 1) In a sorted list of pieces, if the current piece to place down is the same as the previous piece
+ * (was calculated), skip to the next piece to avoid recalculation.
+ * <p>
+ * 2) If the current piece does not fit even with all its rotations, backtrack.
+ * <p>
+ * 3-1) After placing a piece, check around the immediate area around the piece to see if there are any "bubbles" of spaces which
+ * are of a size that are too small (a bubble of two blocks cannot fit any of the 4-block tetris pieces). If there is a "bubble"
+ * that's smaller than a certain size, backtrack. For one space, the bubbleCheck() will only look only as far as a certain number
+ * so it does look through the whole board. Also there is a 2d grid to store what has been bubbledChecked and the size it
+ * encountered. This is checked before looking around the board for the bubble size.
+ * <p>
+ * 3-2) For every bubble formed from placing that one piece, see if there are enough correct pieces remaining to fill these
+ * bubbles. If there aren't, backtrack.
+ * <p>
+ * This code is significantly faster than than ElohimSolver3 because it cuts down on the recursive solution combination search.
+ * <p>
+ * Feel free to improve this work.
  */
 public class SolverBasicV4 implements Solver {
 
