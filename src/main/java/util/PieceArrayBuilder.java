@@ -51,7 +51,7 @@ public class PieceArrayBuilder {
     public void addPieceLReversed(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
-            temp = new PieceLReversed();
+            temp = new PieceJ();
             temp.setId(id++);
             arrayPieces.add(temp);
         }
@@ -62,7 +62,7 @@ public class PieceArrayBuilder {
     public void addPieceSquare(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
-            temp = new PieceSquare();
+            temp = new PieceO();
             temp.setId(id++);
             arrayPieces.add(temp);
         }
@@ -73,7 +73,7 @@ public class PieceArrayBuilder {
     public void addPieceStraight(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
-            temp = new PieceStraight();
+            temp = new PieceI();
             temp.setId(id++);
             arrayPieces.add(temp);
         }
@@ -95,7 +95,7 @@ public class PieceArrayBuilder {
     public void addPieceThunder(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
-            temp = new PieceThunder();
+            temp = new PieceS();
             temp.setId(id++);
             arrayPieces.add(temp);
         }
@@ -106,7 +106,7 @@ public class PieceArrayBuilder {
     public void addPieceThunderReversed(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
-            temp = new PieceThunderReversed();
+            temp = new PieceZ();
             temp.setId(id++);
             arrayPieces.add(temp);
         }

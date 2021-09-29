@@ -12,6 +12,10 @@ There are faster algorithms provided within.
 
 ## Running
 
-Programmed for Java 8, but it has only Java dependencies so you should be a-ok with future versions.
+Programmed for Java 8
+
+Import dependencies from maven. 
 
 Coded in Intellij. You can open up your intellij and run main().
+
+Run the unit tests through Intellij. 

@@ -1,23 +1,20 @@
 package piece;
 
 /**
- * Piece L
+ * Piece I
  * <p>
- * X
- * X
- * XX
+ * XXXX
  *
  * @author LK00100100
  */
+public class PieceI extends Piece {
 
-public class PieceL extends Piece {
-
-    public PieceL() {
+    public PieceI() {
         id = -1;
-        pieceType = "PieceL";
+        pieceType = "PieceI";
 
-        row = 3;
-        col = 2;
+        row = 1;
+        col = 4;
 
         space = new int[row][col];
 
@@ -27,17 +24,17 @@ public class PieceL extends Piece {
         //input the space with a non-zero number, which will be
         //replaced with an ID number for solution identification
         space[0][0] = id;
-        space[1][0] = id;
-        space[2][0] = id;
-        space[2][1] = id;
+        space[0][1] = id;
+        space[0][2] = id;
+        space[0][3] = id;
 
-        rotations = 4;
+        rotations = 2;
         currentRotation = 1;
     }
 
     @Override
     public void printPieceType() {
-        System.out.print("L");
+        System.out.print("I");
     }
 
 }

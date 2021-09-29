@@ -71,7 +71,7 @@ public class SolverBasicV4 implements Solver {
         return findSolutionHelper(currentBox, piecesRemaining);
     }
 
-    public boolean findSolutionHelper(int[][] currentBox, List<Piece> piecesRemaining) {
+    private boolean findSolutionHelper(int[][] currentBox, List<Piece> piecesRemaining) {
 
         if (isSolution(piecesRemaining)) {
             return true;
@@ -770,7 +770,7 @@ public class SolverBasicV4 implements Solver {
         System.out.println();
     }
 
-    public static class BubbleData {
+    private static class BubbleData {
 
         //the upper left corner of the bubble
         public int row;

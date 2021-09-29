@@ -52,7 +52,7 @@ public class SolverBasicV3 implements Solver {
         return findSolutionHelper(currentBox, piecesRemaining);
     }
 
-    public boolean findSolutionHelper(int[][] currentBox, List<Piece> piecesRemaining) {
+    private boolean findSolutionHelper(int[][] currentBox, List<Piece> piecesRemaining) {
 
         if (isSolution(piecesRemaining)) {
             return true;

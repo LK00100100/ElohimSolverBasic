@@ -7,6 +7,7 @@ import piece.*;
 import solvers.Solver;
 import solvers.SolverBasic;
 import solvers.SolverBasicV3;
+import solvers.SolverBasicV4;
 import util.MatrixUtil;
 import util.PieceArrayBuilder;
 
@@ -83,6 +84,7 @@ public class ElohimSolverBasic {
                 solver = new SolverBasicV3();
                 break;
             case "v4":
+                solver = new SolverBasicV4();
                 break;
             default:
                 System.out.println("solver not supported. using solver basic");
