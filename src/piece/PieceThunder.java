@@ -1,22 +1,23 @@
-package Pieces;
+package piece;
 
 /**
- * Piece T
+ * Piece Thunder
  *
+ * X
+ * XX
  *  X
- * XXX
  * 
  * @author LK00100100
  *
  */
-public class PieceT extends Piece {
+public class PieceThunder extends Piece {
 
-	public PieceT(){
+	public PieceThunder(){
 		id = -1;
-		pieceType = "PieceT";
+		pieceType = "PieceThunder";
 
-		row = 2;
-		col = 3;
+		row = 3;
+		col = 2;
 		
 	    space = new int[row][col];
 	    
@@ -25,19 +26,19 @@ public class PieceT extends Piece {
 	    
 	    //input the space with a non-zero number, which will be
 	    //replaced with an ID number for solution identification
+	    space[0][0] = id;
 	    space[1][0] = id;
 	    space[1][1] = id;
-	    space[1][2] = id;
-	    space[0][1] = id;
+	    space[2][1] = id;
 		
-		rotations = 4;
+		rotations = 2;
 		currentRotation = 1;
 		
 	}
 
 	@Override
 	public void printPieceType() {
-		System.out.print("T");
+		System.out.print("Thunder");
 	}
 	
 }

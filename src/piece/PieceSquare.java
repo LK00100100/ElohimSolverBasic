@@ -1,4 +1,4 @@
-package Pieces;
+package piece;
 
 /**
  * Piece Square

@@ -1,20 +1,21 @@
-package Pieces;
+package piece;
 
 /**
- * Piece Thunder
+ * Piece L
  *
  * X
+ * X
  * XX
- *  X
  * 
  * @author LK00100100
  *
  */
-public class PieceThunder extends Piece {
 
-	public PieceThunder(){
+public class PieceL extends Piece {
+	
+	public PieceL(){
 		id = -1;
-		pieceType = "PieceThunder";
+		pieceType = "PieceL";
 
 		row = 3;
 		col = 2;
@@ -28,17 +29,17 @@ public class PieceThunder extends Piece {
 	    //replaced with an ID number for solution identification
 	    space[0][0] = id;
 	    space[1][0] = id;
-	    space[1][1] = id;
+	    space[2][0] = id;
 	    space[2][1] = id;
 		
-		rotations = 2;
+		rotations = 4;
 		currentRotation = 1;
 		
 	}
 
 	@Override
 	public void printPieceType() {
-		System.out.print("Thunder");
+		System.out.print("L");
 	}
-	
+
 }

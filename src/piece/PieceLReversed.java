@@ -1,21 +1,21 @@
-package Pieces;
+package piece;
 
 /**
- * Piece L
+ * Piece L Reversed
  *
- * X
- * X
+ *  X
+ *  X
  * XX
  * 
  * @author LK00100100
  *
  */
 
-public class PieceL extends Piece {
-	
-	public PieceL(){
+public class PieceLReversed extends Piece {
+
+	public PieceLReversed(){
 		id = -1;
-		pieceType = "PieceL";
+		pieceType = "PieceLReversed";
 
 		row = 3;
 		col = 2;
@@ -27,8 +27,8 @@ public class PieceL extends Piece {
 	    
 	    //input the space with a non-zero number, which will be
 	    //replaced with an ID number for solution identification
-	    space[0][0] = id;
-	    space[1][0] = id;
+	    space[0][1] = id;
+	    space[1][1] = id;
 	    space[2][0] = id;
 	    space[2][1] = id;
 		
@@ -39,7 +39,6 @@ public class PieceL extends Piece {
 
 	@Override
 	public void printPieceType() {
-		System.out.print("L");
+		System.out.print("LReversed");
 	}
-
 }
