@@ -10,6 +10,31 @@ import java.util.List;
  * Solves Elohim Puzzle with basic brute-force algorithm.
  * with more solution pruning.
  * version 4.
+ *
+ * solves a game called "Sigil of Elohim" and its tetris box puzzles.
+ * the game was made by DevolverDigital. Available for PC/Mobile for free.
+ *
+ * This code is easily modifiable so that you can:
+ * 1) Have a box with "holes" (not tested).
+ * 2) Have diverse Pieces (not tested).
+ *
+ * This code was created for part A of the game.
+ *
+ * Please note, "bruteforcing backtracking" may take a while to produce the solution.
+ * Turning off System.printStuff makes things faster.
+ *
+ * Note: Not tested for 4-block tetris pieces.
+ *
+ * Note: It takes at most 20 minutes for 2-8 & 3-8 (for my computer at least)
+ *
+ * Note: The order of the sorted pieces heavily affects the program.
+ * Straight pieces followed by square pieces have a lower chance of leaving bubbles.
+ * If they go first, the program is faster.
+ * Maybe? Sorting by piece quantity is better?
+ *
+ * Pruning ideas?
+ * - bubbles that are not divisible by a certain number "like 4"
+ *
  */
 public class SolverBasicV4 implements Solver {
 
