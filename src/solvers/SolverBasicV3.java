@@ -11,6 +11,23 @@ import java.util.List;
  * version 3.
  * - currentBox space left counter (something like this?)??
  * - remove combinations for end parts. 123 = 132 = 213 = 231 = 312 = 321???
+ *
+ * solves a game called "Sigil of Elohim" and its tetris box puzzles.
+ * the game was made by DevolverDigital. Available for PC/Mobile for free.
+ *
+ * This code is easily modifiable so that you can:
+ * 1) Have a box with "holes"
+ * 2) Have diverse Pieces.
+ *
+ * This code was created for part A of the game.
+ *
+ * Please note, "bruteforcing backtracking" may take a while to produce the solution.
+ * Turning off System.printStuff makes things faster.
+ *
+ * Pruning ideas?
+ * - currentBox space left counter (something like this?)??
+ * - remove combinations for end parts. 123 = 132 = 213 = 231 = 312 = 321???
+ *
  */
 public class SolverBasicV3 implements Solver {
 
