@@ -1,5 +1,5 @@
 # ElohimSolverBasic
-![GitHub](https://img.shields.io/github/license/LK00100100/ElohimSolverBasic.svg)
+![GitHub](https://img.shields.io/github/license/LK00100100/ElohimSolverBasic)
 ![RepoSize](https://img.shields.io/github/repo-size/LK00100100/ElohimSolverBasic.svg)
 ![GitHub stars](https://img.shields.io/github/stars/LK00100100/ElohimSolverBasic.svg?style=social)
 
