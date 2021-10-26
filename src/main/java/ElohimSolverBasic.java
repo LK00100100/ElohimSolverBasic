@@ -50,18 +50,18 @@ public class ElohimSolverBasic {
         System.out.println("Programmer Note: There isn't any input error checking cause I am lazy");
         System.out.println("How many L Pieces: ");
         pf.addPieceL(sc.nextInt());
-        System.out.println("How many L Reversed Pieces: ");
-        pf.addPieceLReversed(sc.nextInt());
-        System.out.println("How many Square Pieces: ");
-        pf.addPieceSquare(sc.nextInt());
-        System.out.println("How many Straight Pieces: ");
-        pf.addPieceStraight(sc.nextInt());
+        System.out.println("How many J Pieces: ");
+        pf.addPieceJ(sc.nextInt());
+        System.out.println("How many O Pieces: ");
+        pf.addPieceO(sc.nextInt());
+        System.out.println("How many I Pieces: ");
+        pf.addPieceI(sc.nextInt());
         System.out.println("How many T Pieces: ");
         pf.addPieceT(sc.nextInt());
-        System.out.println("How many Thunder Pieces: ");
-        pf.addPieceThunder(sc.nextInt());
-        System.out.println("How many Thunder Reversed Pieces: ");
-        pf.addPieceThunderReversed(sc.nextInt());
+        System.out.println("How many S Pieces: ");
+        pf.addPieceS(sc.nextInt());
+        System.out.println("How many Z Pieces: ");
+        pf.addPieceZ(sc.nextInt());
 
         pieceArray = pf.getArrayPieces();
         pf.printArray();

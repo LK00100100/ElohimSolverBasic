@@ -5,7 +5,7 @@ package piece;
  * <p>
  * X
  * XX
- * X
+ * .X
  *
  * @author LK00100100
  */

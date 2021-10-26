@@ -48,7 +48,7 @@ public class PieceArrayBuilder {
 
     }
 
-    public void addPieceLReversed(int quantity) {
+    public void addPieceJ(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
             temp = new PieceJ();
@@ -59,7 +59,7 @@ public class PieceArrayBuilder {
         compareSmallestPieceSize(temp);
     }
 
-    public void addPieceSquare(int quantity) {
+    public void addPieceO(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
             temp = new PieceO();
@@ -70,7 +70,7 @@ public class PieceArrayBuilder {
         compareSmallestPieceSize(temp);
     }
 
-    public void addPieceStraight(int quantity) {
+    public void addPieceI(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
             temp = new PieceI();
@@ -92,7 +92,7 @@ public class PieceArrayBuilder {
         compareSmallestPieceSize(temp);
     }
 
-    public void addPieceThunder(int quantity) {
+    public void addPieceS(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
             temp = new PieceS();
@@ -103,7 +103,7 @@ public class PieceArrayBuilder {
         compareSmallestPieceSize(temp);
     }
 
-    public void addPieceThunderReversed(int quantity) {
+    public void addPieceZ(int quantity) {
         //get a new piece, set id, and then add to the arrayPieces.
         for (int i = 0; i < quantity; i++) {
             temp = new PieceZ();

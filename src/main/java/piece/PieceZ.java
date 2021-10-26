@@ -3,7 +3,7 @@ package piece;
 /**
  * Piece Z
  * <p>
- * X
+ * .X
  * XX
  * X
  *
