@@ -153,4 +153,8 @@ public class SolverBasic implements Solver {
         return piecesRemaining.size() == 0;
     }
 
+    @Override
+    public String toString() {
+        return "SolverBasic{}";
+    }
 }

@@ -74,8 +74,8 @@ public class ElohimSolverBasic {
         box = new int[rows][cols];
 
         //pick solver
-        Solver solver = new SolverBasic();
-        System.out.println("Which solver? basic (default), v3, v4");
+        Solver solver = new SolverBasicV4();
+        System.out.println("Which solver? basic, v3, v4  (recommend)");
         switch (sc.next()) {
             case "basic":
                 solver = new SolverBasic();
@@ -87,8 +87,10 @@ public class ElohimSolverBasic {
                 solver = new SolverBasicV4();
                 break;
             default:
-                System.out.println("solver not supported. using solver basic");
+                System.out.println("solver not supported. using solver v4");
         }
+
+        System.out.println("using solver: " + solver);
 
         LocalDateTime startTime = LocalDateTime.now();
 

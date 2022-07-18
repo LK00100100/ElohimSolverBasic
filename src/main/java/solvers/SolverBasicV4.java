@@ -770,6 +770,11 @@ public class SolverBasicV4 implements Solver {
         System.out.println();
     }
 
+    @Override
+    public String toString() {
+        return "SolverBasicV4{}";
+    }
+
     private static class BubbleData {
 
         //the upper left corner of the bubble

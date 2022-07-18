@@ -36,7 +36,7 @@ public class PieceZ extends Piece {
 
     @Override
     public void printPieceType() {
-        System.out.print("PieceZ");
+        System.out.print("Z");
     }
 
 }
